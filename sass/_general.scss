@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bck {
+    background: rgb(117, 103, 156);
+    background: radial-gradient(circle, rgba(117, 103, 156, 1) 23%, rgba(38, 45, 140, 1) 100%);
+    color: $colorCrema;
+}
+
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: $colorFucsia;
+    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: $fuenteUno;
+    letter-spacing: px;
+    display: inline-block;
+    position:relative;
+    color: $colorAzul;
+    font-weight: 600;
+    font-size:  3em;
+}
+
+.encabezado{
+    margin-top: 20px;
+    color:$colorAzul;
+}
+
+p{
+    margin-top: 20px;
+    padding: 5px;
+    font-family: $fuenteTres;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.imagen{
+    margin: 20px;
+}

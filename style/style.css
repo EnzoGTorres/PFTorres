@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Prosto+One&family=Yanone+Kaffeesatz:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bck, footer {
+  background: rgb(117, 103, 156);
+  background: radial-gradient(circle, rgb(117, 103, 156) 23%, rgb(38, 45, 140) 100%);
+  color: #FFFFCC;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  color: #262d8c;
+  text-align: center;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: px;
+  display: inline-block;
+  position: relative;
+  color: #000066;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+.encabezado {
+  margin-top: 20px;
+  color: #000066;
+}
+
+p {
+  margin-top: 20px;
+  padding: 5px;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.imagen {
+  margin: 20px;
+}
+
+.titulo {
+  font-weight: 200;
+}
+.titulo p {
+  font-family: "Kanit", sans-serif;
+}
+.titulo h2 {
+  font-family: "Prosto One", cursive;
+}
+
+.cabeza {
+  width: 100%;
+  background: rgb(117, 103, 156);
+  background: radial-gradient(circle, rgb(117, 103, 156) 23%, rgb(38, 45, 140) 100%);
+  margin-bottom: 0.5em;
+}
+
+.principal {
+  min-width: 300px;
+  margin-top: 0.5em;
+}
+
+img {
+  width: 95%;
+  justify-content: center;
+  border-radius: 1.5rem;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.fila {
+  padding: 1.5rem;
+  margin: 0.5rem;
+  box-shadow: 2px 2px 30px black;
+  border-radius: 15px;
+  background-color: rgba(255, 250, 175, 0.75);
+}
+.fila h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.btg {
+  background-color: #262d8c;
+  color: #FFFFCC;
+}
+
+.bgc {
+  background-color: #FFFFCC;
+}
+
+footer {
+  padding: 1.5em;
+  grid-area: footer;
+  align-items: center;
+}
+
+.pie_pagina .parte-1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  padding: 35px 0px;
+}
+.pie_pagina .parte-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie_pagina .parte-1 .box figure img {
+  width: 20%;
+}
+.pie_pagina .parte-1 .box h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie_pagina .parte-1 .box p {
+  color: #FFFFCC;
+  margin-bottom: 10px;
+}
+.pie_pagina .parte-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFCC;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin-right: 10px;
+  text-align: center;
+  transition: all 100ms ease;
+}
+.pie_pagina .parte-1 .red-social a:hover {
+  color: currentColor;
+}
+.pie_pagina .parte-2 {
+  background: rgb(117, 103, 156);
+  background: radial-gradient(circle, rgb(117, 103, 156) 23%, rgb(38, 45, 140) 100%);
+  padding: 15px 50px;
+  margin: 0 50px 0 50px;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  h1::after, h1::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.7em;
+    transform: scale(0);
+    transition: all 0.2s ease-in;
+  }
+  h1:hover::before, h1:hover::after {
+    transform: scale(1);
+  }
+  h1::before {
+    left: -110px;
+  }
+  h1::after {
+    right: -110px;
+  }
+  .fila a {
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  .fila a:hover {
+    transform: scale(1.5);
+  }
+  .acercar {
+    overflow: hidden;
+  }
+  .acercar .imagen {
+    width: 50%;
+    height: 50%;
+    transition: all 1.2s;
+  }
+  .acercar:hover .imagen {
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px #262d8c;
+    -webkit-box-shadow: 0px 0px 15px 15px #262d8c;
+    transform: overflow;
+    -webkit-transform: rotateZ(90);
+  }
+  .acercar:hover .tarjeta {
+    transform: scale(1.5);
+  }
+  .animarTarjeta {
+    overflow: hidden;
+  }
+  .animarTarjeta img {
+    transition: transform 2s;
+  }
+  .animarTarjeta:hover img {
+    transform: scale(1.3);
+  }
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+  .figureUno {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .figureDos {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .figureTres {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .figureCuatro {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .fila {
+    padding: 1.5em 1em 1.5em 1em;
+    box-shadow: 3px 3px 50px black;
+    background-color: rgba(255, 250, 175, 0.75);
+  }
+  img {
+    width: 50%;
+    justify-content: center;
+    border-radius: 1.5rem;
+  }
+  .estatica {
+    display: none;
+  }
+  .box-1 {
+    grid-area: box-1;
+  }
+  .box-2 {
+    grid-area: box-2;
+  }
+  .box-3 {
+    grid-area: box-3;
+  }
+  .pie_pagina .parte-1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "box-1 box-2 " "box-1 box-2" "box-3 box-3";
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+  .pie_pagina .parte-1 .box h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie_pagina .parte-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pie_pagina .parte-1 .box figure img {
+    width: 20%;
+  }
+  .pie_pagina .parte-1 .box figure p {
+    color: #FFFFCC;
+    margin-bottom: 10px;
+  }
+  .pie_pagina .parte-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFCC;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 100ms ease;
+  }
+  .pie_pagina .parte-1 .red-social a:hover {
+    transform: scale(2);
+    color: #FFFFCC;
+  }
+  .pie_pagina .parte-2 {
+    background-color: #571d2d;
+    padding: 15px 50px;
+    margin: 0 50px 0 50px;
+    text-align: center;
+  }
+}
+@media (min-width: 760px) {
+  h1::after, h1::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.7em;
+    transform: scale(0);
+    transition: all 0.2s ease-in;
+  }
+  h1:hover::before, h1:hover::after {
+    transform: scale(1);
+  }
+  h1::before {
+    left: -110px;
+  }
+  h1::after {
+    right: -110px;
+  }
+  .fila a {
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  .fila a:hover {
+    transform: scale(1.5);
+  }
+  .acercar {
+    overflow: hidden;
+  }
+  .acercar .imagen {
+    width: 50%;
+    height: 50%;
+    transition: all 1.2s;
+  }
+  .acercar:hover .imagen {
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px #262d8c;
+    -webkit-box-shadow: 0px 0px 15px 15px #262d8c;
+    transform: overflow;
+    -webkit-transform: rotateZ(90);
+  }
+  .acercar:hover .tarjeta {
+    transform: scale(1.5);
+  }
+  .animarTarjeta {
+    overflow: hidden;
+  }
+  .animarTarjeta img {
+    transition: transform 2s;
+  }
+  .animarTarjeta:hover img {
+    transform: scale(1.3);
+  }
+  .contenedor {
+    display: flex;
+    padding-block: 2rem;
+  }
+  .fila {
+    padding: 1.5em;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    box-shadow: 3px 3px 50px black;
+    background-color: rgba(255, 250, 175, 0.75);
+  }
+  .figureUno, .figureDos, .figureTres, .figureCuatro {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .encabezado {
+    display: none;
+  }
+  .box-1 {
+    grid-area: box-1;
+  }
+  .box-2 {
+    grid-area: box-2;
+  }
+  .box-3 {
+    grid-area: box-3;
+  }
+  .pie_pagina {
+    width: 100%;
+  }
+  .pie_pagina .parte-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: none;
+    grid-template-areas: "box-1 box-2 box-3";
+    grid-gap: 50px;
+    padding: 45px 0px;
+  }
+  .pie_pagina .parte-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pie_pagina .parte-1 .box figure img {
+    width: 20%;
+  }
+  .pie_pagina .parte-1 .box h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie_pagina .parte-1 .box p {
+    color: #FFFFCC;
+    margin-bottom: 10px;
+  }
+  .pie_pagina .parte-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFCC;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 100ms ease;
+  }
+  .pie_pagina .parte-1 .red-social a:hover {
+    transform: scale(2);
+    color: #FFFFCC;
+  }
+  .pie_pagina .parte-2 {
+    background-color: #571d2d;
+    padding: 15px 50px;
+    margin: 0 50px 0 50px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

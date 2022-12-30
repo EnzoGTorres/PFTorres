@@ -1,0 +1,149 @@
+@import "fuentes";
+@import "color";
+@import "general";
+@import "titulo";
+
+.cabeza {
+    width: 100%;
+    background: rgb(117, 103, 156);
+    background: radial-gradient(circle, rgba(117, 103, 156, 1) 23%, rgba(38, 45, 140, 1) 100%);
+    margin-bottom: 0.5em;
+}
+
+.principal{
+    min-width: 300px;
+    margin-top: 0.5em;
+}
+
+img{
+    width: 95%;
+    justify-content: center;
+    border-radius: 1.5rem;
+}
+
+.contenedor{
+    display:flex;
+    flex-direction: column;
+}
+
+.fila{
+
+    padding: 1.5rem;
+    margin: 0.5rem;
+    box-shadow: 2px 2px 30px black;
+    border-radius: 15px;
+    background-color: rgba($color: #fffaaf, $alpha: .75);
+        h2{
+            font-size: 2em;
+            font-weight: 600;
+        }
+}
+
+.btg{
+    background-color: $colorFucsia;
+    color: $colorCrema;
+}
+
+.bgc{
+    background-color:$colorCrema;
+}
+
+@import "footerSm";
+
+@media (min-width: 500px){
+    @import "animaciones";
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @mixin filas($align-items, $align-content, $justify-content){
+        align-items: $align-items;
+        align-content: $align-content;
+        justify-content: $justify-content;
+    }
+
+
+    .figureUno{
+        display: flex;
+        flex-direction: row;
+        @include filas(stretch, center, space-between);
+        
+    }
+
+    .figureDos{
+        display: flex;
+        flex-direction: row-reverse;
+        @include filas(stretch, center, space-between);
+        
+    }
+
+    .figureTres{
+        display: flex;
+        flex-direction: row;
+        @include filas(stretch, center, space-between);
+        
+    }
+
+    .figureCuatro{
+        display: flex;
+        flex-direction: row;
+        @include filas(stretch, center, space-between);
+        
+    }
+
+    .fila{
+        padding: 1.5em 1em 1.5em 1em;
+        box-shadow: 3px 3px 50px black;
+        background-color: rgba($color: #fffaaf, $alpha: .75);
+    }
+
+
+    img{
+        width: 50%;
+        justify-content: center;
+        border-radius: 1.5rem;
+    }
+
+    .estatica{
+        display: none;
+    }
+    @import "footerMd";
+
+}
+
+@media (min-width: 760px){
+    @import "animaciones";
+
+    .contenedor{
+        display: flex;
+        padding-block: 2rem;
+    }
+    
+
+    .fila{
+        padding: 1.5em;
+        max-width: fit-content;
+        box-shadow: 3px 3px 50px black;
+        background-color: rgba($color: #fffaaf, $alpha: .75);
+    }
+
+
+    .figureUno, .figureDos, .figureTres, .figureCuatro{
+        display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    .encabezado{
+        display: none;
+    }
+
+
+    @import "footerLr";
+
+}

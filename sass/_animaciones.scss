@@ -1,0 +1,64 @@
+h1::after, h1::before{  
+    content:"";
+    position:absolute;
+    width: 100px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.7em;
+    transform: scale(0);
+    transition: all 0.2s ease-in;
+}
+
+h1:hover::before, h1:hover::after{
+    transform: scale(1);
+}
+
+h1::before{
+    left: -110px;
+}
+
+h1::after{
+    right: -110px;
+}
+
+.fila a{
+    transition-property: all;
+    transition-duration: 300ms;
+}
+.fila a:hover{
+    transform: scale(1.5);
+}
+.acercar {
+    overflow: hidden;
+    .imagen {
+        width: 50%;
+        height: 50%;
+        transition: all 1.2s;
+    }
+    }
+
+.acercar:hover .imagen {
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px $colorFucsia;
+    -webkit-box-shadow: 0px 0px 15px 15px $colorFucsia;
+    transform: overflow;
+    -webkit-transform: rotateZ(90);
+}
+
+.acercar:hover .tarjeta{
+    transform: scale(1.5);
+}
+
+.animarTarjeta{
+    overflow: hidden;
+}
+
+.animarTarjeta img{
+    transition: transform 2s;
+}
+
+.animarTarjeta:hover img{
+    transform: scale(1.3);
+}
